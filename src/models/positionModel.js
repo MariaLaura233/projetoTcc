@@ -18,4 +18,20 @@ static async insertPosition(positionData){
     return result;
 }
 
+static async updatePosition(position_id, position_name) {
+
+const update = `UPDATE position SET position_name = ? WHERE position_id = ?;`
+; const [result] = await database.query(update, [position_name, position_id]);
+
+return result;
+
+}
+
+static async deletePosition(position_id) {
+
+const deletePosition = `DELETE FROM position WHERE position_id = ?,`;
+ const [result] = await database.query(deletePosition, [position_id]);
+
+return result;
+ }
 };

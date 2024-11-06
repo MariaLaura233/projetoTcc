@@ -1,11 +1,22 @@
-*, *::before, *::after{
+*,
+*::before,
+ *::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-*{
-    font-family: cursive;
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+background: var(--cor-branco);
+border-radius: 10px;
 }
 
 a{
@@ -679,7 +690,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--cor-cinza);
-    width: 50%;
+    width: 40%;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -687,6 +698,7 @@ h1 {
     position: relative;
     border-radius: 0.8rem;
     box-shadow: 0px 0px 51px 25px rgb(0, 0, 0.75);
+    padding: 2rem;
 }
 .modal-add-position form{
     height: 300px;
@@ -753,9 +765,6 @@ h1 {
 /* codigo do video */
 
 
-
-
-
 .icon-perfil{
     font-size: 3.5rem;
     border-radius: 20%;
@@ -782,3 +791,341 @@ h1 {
     margin-top: 300px;
     background-color: #ffbd59;
 }
+ /* estilo do formulario de upload das imagens uploaded */
+
+ .group-images {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+ }
+
+ .image {
+    padding: 1rem;
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+ }
+
+ .content-form-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .content-form-upload form {
+    width: 60%;
+ }
+
+ .content-form-upload form  .input-upload label {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 0.13rem solid var(--cor-preto);
+    border-radius: 0.2rem;
+    background: var(--cor-branco);
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    font-weight: bold;
+    cursor: pointer;
+ }
+
+ .content-form-upload form .input-upload input {
+    text-align: center;
+    width: 100%;
+ }
+
+ .content-form-upload form  .input-upload input::-webkit-file-upload-button {
+    display: none;
+ }
+
+ .content-form-upload form .content-btn{
+    padding: 1rem 0;
+ }
+
+ .content-form-upload form .content-btn button {
+    width: 100%;
+    border: 0.13rem solid var(--cor-preto);
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 300ms ease-in-out;
+ }
+
+ .content-form-upload form .content-btn button:hover {
+    background: var(--cor-verde);
+ }
+
+ /* mensagem de erro e sucesso */
+
+ .content-msg {
+    padding-top: 0.5rem;
+ }
+
+ .msgErrorInput {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+ }
+
+ .msgError,
+ .msgSucess {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.msgError,
+.msgSucess,
+.msgErrorInput {
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.msgError,
+.msgErrorInput {
+    color: var(--cor-vermelho);
+    background: var(--cor-vermelho-light);
+}
+
+.msgSucess {
+    color: var(--cor-verde);
+    background: var(--cor-verde-light);
+}
+
+.msgSucess a,
+.msgError a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-vermelho);
+    padding: 0 1rem;
+}
+
+/* estilo da modal delete page e position*/
+
+.content-delete h3 {
+    font-size: 1.8rem;
+}
+
+.content-delete p {
+    font-size: 1.4rem;
+}
+
+.content-delete h3,
+.content-delete p {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.btns_delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.btns_delete button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.2rem 2rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--cor-preto);
+    border-radius: 0.2rem;
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.btns_delete button.btn_cancel:hover{
+    background: var(--cor-azul-light);
+}
+
+.btns_delete button.btns_delete:hover{
+    background: var(--cor-vermelho);
+}
+
+/* estilo da lista de pages */
+
+.table{
+    padding: 2rem 0 0 0;
+}
+
+.row{
+    background: var(--cor-branco);
+    padding: 0.5rem;
+}
+
+.row-border{
+    display: grid;
+    grid-template-columns: 25% 25% 15% 17% 18%;
+    border-bottom: 0.2rem solid;
+}
+
+.grid_position{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    border-bottom: 0.2rem solid;
+    align-items: center;
+}
+
+.header-page {
+    font-weight: bold;
+}
+
+.col {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+}
+
+.col .edit {
+    color: var(--cor-verde);
+    font-weight: bold;
+    border-bottom: 5px solid transparent;
+    transition: border-bottom 300ms ease-in-out;
+}
+
+.col .edit:hover {
+    border-bottom: 5px solid var(--cor-verde);
+}
+
+.col .edit i {
+    font-weight: bold;
+}
+
+.col .delete {
+    color: var(--cor-vermelho-little-light);
+    font-weight: bold;
+    border-bottom: 5px solid transparent;
+    transition: border-bottom 300ms ease-in-out;
+}
+
+.col .delete:hover {
+    border-bottom: 5px solid var(--cor-vermelho-little-light);
+}
+
+.col .delete i {
+    font-weight: bold;
+}
+
+/* estilo da galeria de imagens */
+
+.container-galeria h3{
+    font-size: 1.5rem;
+    color: var(--cor-branco);
+}
+
+.all_images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+    height: 400px;
+    overflow: auto;
+    margin-bottom: 2rem;
+    border: 0.1rem solid var(--cor-cinza);
+}
+
+.content_image {
+    background: var(--cor-branco);
+    position: relative;
+    padding: 0.3rem;
+}
+
+.show_img {
+    cursor: pointer;
+    height: 100px;
+    overflow: hidden;
+}
+
+.show_img img {
+    min-width: 100px;
+}
+
+.img_name {
+    position: absolute;
+    opacity: 0;
+    left: -800px;
+    overflow: hidden;
+}
+
+.active_color {
+    background: var(--cor-verde);
+}
+
+/* estilo do login admin */
+
+.form-admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.form-admin .form {
+    width: 40%;
+}
+
+.form-admin .form h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.form-admin .form .form-group .input {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.form-admin .form .form-group .input input {
+    font-size: 1.3rem;
+    width: 100%;
+    outline: none;
+    padding: 0.3rem 1rem;
+    border: 0.13 solid var(--cor-preto);
+    border-radius: 0.2rem;
+    transition: all 300ms ease-in-out;
+}
+
+.form-admin .form .form-group .input label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    transition: all 300ms ease-in-out;
+    pointer-events: none;
+    color: var(--cor-cinza);
+    font-size: 1.2rem;
+}
+
+.form-admin .form .form-group .input input:not(:placeholder-shown) + label,
+.form-admin .form .form-group .input input:focus + label {
+  top: 5%;
+  left: 0;
+  padding: 0 0.5rem;
+  color:  var(--cor-preto);  
+}
+
+.form-admin .form .form-group .btn-group {
+    padding: 1rem 0;
+}
+
+.form-admin .form .form-group .btn-group button {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    border: 0.13rem solid var(--cor-preto);
+    background: var(--cor-verde-light);
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.form-admin .form .form-group button:hover {
+    background: var(--cor-verde);
+    color: var(--cor-branco);
+}
+
+

@@ -13,11 +13,20 @@ module.exports = class MateriasController {
   static async getMateriaArtes(req, res) {
     return res.render("artes");
   }
-  static async getMateriaCienciasHumanas(req, res) {
-    return res.render("ciencias-humanas");
+  static async getMateriaHistoria(req, res) {
+    return res.render("historia");
   }
-  static async getMateriaCienciasdaNatureza(req, res) {
-    return res.render("ciencias-da-natureza");
+  static async getMateriaGeografia(req, res) {
+    return res.render("geografia");
+  }
+  static async getMateriaFilosofia(req, res) {
+    return res.render("filosofia");
+  }
+  static async getMateriaSociologia(req, res) {
+    return res.render("sociologia");
+  }
+  static async getMateriaBiologia(req, res) {
+    return res.render("biologia");
   }
   static async getMateriaFisica(req, res) {
     return res.render("fisica");

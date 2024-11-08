@@ -303,3 +303,23 @@ function verificarQuestao5A() {
   }
   resultado.textContent = "Por favor, selecione uma resposta.";
 }
+
+function verificarQuestao1H() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "D-fiscalização estatal diante das particularidades econômicas.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}

@@ -323,3 +323,363 @@ function verificarQuestao1H() {
   }
   resultado.textContent = "Por favor, selecione uma resposta.";
 }
+
+function verificarQuestao2H() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "B-utilizar os vestígios restaurados para justificar o regime político.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1G() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "E-desterritorialização forçada de populações afetadas por conflitos armados.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2G() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "B-conclusão da transição demográfica.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1F() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "B-Sustentação do método dialético.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2F() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "A-idealidade e efetividade da moral.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1S() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "B-debate livre e racional entre cidadãos e Estado.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2S() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "B-cotas de gênero nas candidaturas partidárias.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1B() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "A-propicia o fluxo gênico.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2B() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "C-exploração de diferentes nichos, evitando a competição entre as fases da vida.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1Q() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "A-fórmula estrutural.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2Q() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "A-reduzir a quantidade de resíduos tóxicos nos efluentes da lavagem.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1FISICA() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "B-2";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2FISICA() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "A-amplitude e velocidade.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao1PORT() {
+  const radios = document.getElementsByName("questao1");
+  let respostaCerta = "B-apontar a hipocrisia do discurso conservador na defesa da escravidão.";
+  let resultado = document.getElementById("resultado1");
+  let resolucao = document.getElementById("resolucao1");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao2PORT() {
+  const radios = document.getElementsByName("questao2");
+  let respostaCerta = "C-brevidade no tratamento da temática.";
+  let resultado = document.getElementById("resultado2");
+  let resolucao = document.getElementById("resolucao2");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao3PORT() {
+  const radios = document.getElementsByName("questao3");
+  let respostaCerta = "D-comercialização de pontos de vista.";
+  let resultado = document.getElementById("resultado3");
+  let resolucao = document.getElementById("resolucao3");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao4PORT() {
+  const radios = document.getElementsByName("questao4");
+  let respostaCerta = "A-reaproveitamento de material.";
+  let resultado = document.getElementById("resultado4");
+  let resolucao = document.getElementById("resolucao4");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}
+
+function verificarQuestao5PORT() {
+  const radios = document.getElementsByName("questao5");
+  let respostaCerta = "A-amalgamada pelo processo comum de desertificação e de solidão.";
+  let resultado = document.getElementById("resultado5");
+  let resolucao = document.getElementById("resolucao5");
+
+  for (const radio of radios) {
+    if (radio.checked) {
+      if (radio.value === respostaCerta) {
+        resultado.textContent = "Você acertou!";
+      } else {
+        resultado.textContent = "Você errou.";
+      }
+      resolucao.style.display = "block";
+      return;
+    }
+  }
+  resultado.textContent = "Por favor, selecione uma resposta.";
+}

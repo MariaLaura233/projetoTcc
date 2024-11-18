@@ -983,22 +983,4 @@ function verificarQuestao5MAT() {
   }
   resultado.textContent = "Por favor, selecione uma resposta.";
 }
-function verificarQuestao6MAT() {
-  const radios = document.getElementsByName("questao6");
-  let respostaCerta = "B-1 × 10¹";
-  let resultado = document.getElementById("resultado6");
-  let resolucao = document.getElementById("resolucao6");
 
-  for (const radio of radios) {
-    if (radio.checked) {
-      if (radio.value === respostaCerta) {
-        resultado.textContent = "Você acertou!";
-      } else {
-        resultado.textContent = "Você errou.";
-      }
-      resolucao.style.display = "block";
-      return;
-    }
-  }
-  resultado.textContent = "Por favor, selecione uma resposta.";
-}

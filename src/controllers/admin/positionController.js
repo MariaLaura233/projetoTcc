@@ -1,3 +1,5 @@
+const PositionModel = require("../../models/positionModel");
+
 module.exports = class PositionController {
   static async getPosition(req, res) {
     const adminUser = req.session.adminUser;
@@ -17,7 +19,7 @@ module.exports = class PositionController {
       return res.redirect();
     }
 
-    const result = await PositionPageModel.insertPosition(position_name);
+    const result = await PositionModel.insertPosition(position_name);
     console.log(result);
 
     return res.redirect();
@@ -35,7 +37,7 @@ module.exports = class PositionController {
 
     console.log(position);
 
-    const result = await positionModel.insertPosition(position);
+    const result = await PositionModel.insertPosition(position);
     console.log(result);
 
     return res.redirect(

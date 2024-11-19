@@ -1,5 +1,5 @@
 const express = require("express");
-const PagesController = require("../controllers/admin/positionController");
+const PositionController = require("../controllers/admin/positionController");
 
 const positionRoute = express.Router();
 

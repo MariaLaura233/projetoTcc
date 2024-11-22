@@ -48,6 +48,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(
+  "/tinymce",
+  express.static(path.join(__dirname, "node_modules", "tinymce"))
+);
+
 app.use("/", homeRoute);
 app.use("/admin", adminRoute);
 app.use("/dashboard", dashboardRoute);
@@ -68,4 +73,3 @@ app.listen(port, async () => {
     console.log(`http://localhost:${port}`);
   }
 });
-

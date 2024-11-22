@@ -43,6 +43,13 @@
         <div class="content-form-login2">
           <form action="/loginRegister/login" method="post">
             <h1 style="color:  var(--cor-verde);">Vestibulares</h1>
+            <% pages.forEach((page) => {%>
+            <div>
+              <% if (page.position_name === "teste"){ %>
+              <div><%- page.page_content %></div>
+            <% } %>
+            </div>
+            <% }) %>
             <ul>
               <li>
                  <h3 id="enem">  <p>Enem</p> </h3><br>

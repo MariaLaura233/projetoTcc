@@ -47,7 +47,7 @@ module.exports = class PagesController {
       "/pages/createPages?msgSuccess = Pagina criada com sucesso!"
     );
   }
-  
+
   static async getEditPage(req, res) {
     const adminUser = req.session.adminUser;
     const getParams = req.params.id;

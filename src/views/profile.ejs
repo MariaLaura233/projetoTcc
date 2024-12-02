@@ -86,53 +86,130 @@
               }
           </style>
       </head>
-      <body>
-          
-      
-          <section class="perfil container">
-              <div class="perfil-info">
-                <li><p><div class="icon-perfil-profile">
-                  <i class="bx bxs-user"></i>
-                </div></p></li>
-                <p contenteditable="true" class="editable">
-                  <p><strong>username</strong></p>
-                  <p>nome completo</p>
-                  <p>Email: @huhedwsh.com</p>
-                  <p>CEP: 238437210</p>
-                  <p>Gênero: prefiro não informar</p>
-                  <p>Idade: 17</p>
-                  <p>Escolaridade: Ensino Médio</p>
-                  <p>Curso de Interesse: Medicina</p>
-                </p>
-                <div contenteditable="true" class="editable">
-                  <p>Você também pode editar o conteúdo dentro desta div.</p>
-              </div>
-          
-              <button onclick="salvarConteudo()">Salvar Alterações</button>
-          
-              <script>
-                  function salvarConteudo() {
-                      const conteudos = document.querySelectorAll('.editable');
-                      conteudos.forEach((conteudo, index) => {
-                          console.log(`Conteúdo ${index + 1}:`, conteudo.innerHTML);
-                          // Aqui você poderia enviar o conteúdo para um servidor, salvar em localStorage, etc.
-                      });
-                      alert('Alterações salvas (ver no console).');
-                  }
-              </script>
-              </div>
-              <div class="editar">
-                  <button>Editar</button>
-              </div>
-              <div class="quest-icon">
-                  <img src="/img/logo.png">
-              </div>
-          </section>
-      </body>
-      </html>
-      
-        
-    </main> 
-        <%- include('components/footer') %>
-  </body>
+<body>
+    <section class="perfil container">
+        <div class="perfil-info">
+            <div class="icon-perfil-profile">
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="editable">
+                <form
+                id="form_profile"
+                action="/profile/<%= userLogged.user_id %>"
+                method="post"
+                >
+                <h2>username</h2>
+                <div class="grid_profile">
+                    <span>Nome:</span>
+                    <input
+                    type="text"
+                    disabled
+                    name="user_name"
+                    value="<%= userLogged.user_name %>"
+                    id="activeInput"
+                    />
+                </div>
+                <div class="grid_profile">
+                    <span>Email:</span>
+                    <input
+                    type="text"
+                    disabled
+                    name="user_email"
+                    value="<%= userLogged.user_email %>"
+                    id="activeInput"
+                    />
+                </div>
+                <div class="grid_profile">
+                    <span>CEP:</span>
+                    <input
+                    type="text"
+                    disabled
+                    name="user_cep"
+                    value="<%= userLogged.user_cep %>"
+                    id="activeInput"
+                    />
+                    <div class="grid_profile">
+                        <span>Genero:</span>
+                        <input
+                        type="text"
+                        disabled
+                        name="user_genero"
+                        value="<%= userLogged.user_genero %>"
+                        id="activeInput"
+                        />
+
+                        <div class="grid_profile">
+                            <span>idade:</span>
+                            <input
+                            type="text"
+                            disabled
+                            name="user_idade"
+                            value="<%= userLogged.user_idade %>"
+                            id="activeInput"
+                            />
+                            <div class="grid_profile">
+                                <span>escolaridade:</span>
+                                <input
+                                type="text"
+                                disabled
+                                name="user_escolaridade"
+                                value="<%= userLogged.user_escolaridade %>"
+                                id="activeInput"
+                                />
+                                <div class="grid_profile">
+                                    <span>Curso de interesse:</span>
+                                    <input
+                                    type="text"
+                                    disabled
+                                    name="user_curso_interesse"
+                                    value="<%= userLogged.user_curso_interesse %>"
+                                    id="activeInput"
+                                    />
+                    <div class="editar grid_profile" id="editable">
+                        <div></div>
+                        <div>
+                            <a id="edit" href="#">Editar</a>
+                            <a id="cancel" href="#">Cancelar</a>
+                            <button id="update" disabled type="submit">
+                                Atualozar Perfil
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-msg">
+                        <% if(msgSuccess) { %>
+                        <div class="msgSuccess"> <a href="/profile">X</a>
+                        </div>
+                        <% } %> <% if (msgError) { %>
+                        <div class="msgError">
+                            <%= msgError %> <a href="/profile">X</a>
+                        </div>
+                        <% } %>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
+</main>
+<script>
+    const editable = document.querySelector("#editable");
+
+    const btnUpdateProfile = document.querySelector("#update");
+    const btnEditProfile = document.querySelector(#edit);
+    const btnCancel = document.querySelector("#cancel");
+
+    btnCancel.style.display =  "none";
+
+    btnEditProfile.addEventListener("click", () => {
+        btnCancel.style.display = "flex";
+        btnEditProfile.style.display = "none";
+        btnUpdateProfile.classList.add("enable");
+        const activeInput = document.querySelectorAll("#form_profile input");
+
+        activeInput.forEach((edit) => {
+            edit.disabled = false;
+            edit.classList.add("activeInput");
+        });
+    });
+</script>

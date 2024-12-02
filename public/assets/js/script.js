@@ -8,10 +8,13 @@ function verificarQuestao1EF() {
     if (radio.checked) {
       if (radio.value === respostaCerta) {
         resultado.textContent = "Você acertou!";
+        resultado.classList.add("acertou");
       } else {
         resultado.textContent = "Você errou.";
+        resultado.classList.add("errou");
       }
       resolucao.style.display = "block";
+      document.querySelector("#btnQ1EF").disable = true;
       return;
     }
   }
@@ -28,10 +31,13 @@ function verificarQuestao2EF() {
     if (radio.checked) {
       if (radio.value === respostaCerta) {
         resultado.textContent = "Você acertou!";
+        resultado.classList.add("acertou");
       } else {
         resultado.textContent = "Você errou.";
+        resultado.classList.add("errou");
       }
       resolucao.style.display = "block";
+      document.querySelector("#btnQ2EF").disable = true;
       return;
     }
   }
@@ -49,10 +55,13 @@ function verificarQuestao3EF() {
     if (radio.checked) {
       if (radio.value === respostaCerta) {
         resultado.textContent = "Você acertou!";
+        resultado.classList.add("acertou");
       } else {
         resultado.textContent = "Você errou.";
+        resultado.classList.add("errou");
       }
       resolucao.style.display = "block";
+      document.querySelector("#btnQ3EF").disable = true;
       return;
     }
   }
@@ -70,10 +79,13 @@ function verificarQuestao4EF() {
     if (radio.checked) {
       if (radio.value === respostaCerta) {
         resultado.textContent = "Você acertou!";
+        resultado.classList.add("acertou");
       } else {
         resultado.textContent = "Você errou.";
+        resultado.classList.add("errou");
       }
       resolucao.style.display = "block";
+      document.querySelector("#btnQ4EF").disable = true;
       return;
     }
   }
@@ -90,10 +102,13 @@ function verificarQuestao5EF() {
     if (radio.checked) {
       if (radio.value === respostaCerta) {
         resultado.textContent = "Você acertou!";
+        resultado.classList.add("acertou");
       } else {
         resultado.textContent = "Você errou.";
+        resultado.classList.add("errou");
       }
       resolucao.style.display = "block";
+      document.querySelector("#btnQ5EF").disable = true;
       return;
     }
   }
@@ -306,7 +321,8 @@ function verificarQuestao5A() {
 
 function verificarQuestao1H() {
   const radios = document.getElementsByName("questao1");
-  let respostaCerta = "D-fiscalização estatal diante das particularidades econômicas.";
+  let respostaCerta =
+    "D-fiscalização estatal diante das particularidades econômicas.";
   let resultado = document.getElementById("resultado1");
   let resolucao = document.getElementById("resolucao1");
 
@@ -326,7 +342,8 @@ function verificarQuestao1H() {
 
 function verificarQuestao2H() {
   const radios = document.getElementsByName("questao2");
-  let respostaCerta = "B-utilizar os vestígios restaurados para justificar o regime político.";
+  let respostaCerta =
+    "B-utilizar os vestígios restaurados para justificar o regime político.";
   let resultado = document.getElementById("resultado2");
   let resolucao = document.getElementById("resolucao2");
 
@@ -346,7 +363,8 @@ function verificarQuestao2H() {
 
 function verificarQuestao1G() {
   const radios = document.getElementsByName("questao1");
-  let respostaCerta = "E-desterritorialização forçada de populações afetadas por conflitos armados.";
+  let respostaCerta =
+    "E-desterritorialização forçada de populações afetadas por conflitos armados.";
   let resultado = document.getElementById("resultado1");
   let resolucao = document.getElementById("resolucao1");
 
@@ -486,7 +504,8 @@ function verificarQuestao1B() {
 
 function verificarQuestao2B() {
   const radios = document.getElementsByName("questao2");
-  let respostaCerta = "C-exploração de diferentes nichos, evitando a competição entre as fases da vida.";
+  let respostaCerta =
+    "C-exploração de diferentes nichos, evitando a competição entre as fases da vida.";
   let resultado = document.getElementById("resultado2");
   let resolucao = document.getElementById("resolucao2");
 
@@ -526,7 +545,8 @@ function verificarQuestao1Q() {
 
 function verificarQuestao2Q() {
   const radios = document.getElementsByName("questao2");
-  let respostaCerta = "A-reduzir a quantidade de resíduos tóxicos nos efluentes da lavagem.";
+  let respostaCerta =
+    "A-reduzir a quantidade de resíduos tóxicos nos efluentes da lavagem.";
   let resultado = document.getElementById("resultado2");
   let resolucao = document.getElementById("resolucao2");
 
@@ -586,7 +606,8 @@ function verificarQuestao2FISICA() {
 
 function verificarQuestao1PORT() {
   const radios = document.getElementsByName("questao1");
-  let respostaCerta = "B-apontar a hipocrisia do discurso conservador na defesa da escravidão.";
+  let respostaCerta =
+    "B-apontar a hipocrisia do discurso conservador na defesa da escravidão.";
   let resultado = document.getElementById("resultado1");
   let resolucao = document.getElementById("resolucao1");
 
@@ -666,7 +687,8 @@ function verificarQuestao4PORT() {
 
 function verificarQuestao5PORT() {
   const radios = document.getElementsByName("questao5");
-  let respostaCerta = "A-amalgamada pelo processo comum de desertificação e de solidão.";
+  let respostaCerta =
+    "A-amalgamada pelo processo comum de desertificação e de solidão.";
   let resultado = document.getElementById("resultado5");
   let resolucao = document.getElementById("resolucao5");
 
@@ -706,7 +728,8 @@ function verificarQuestao1ES() {
 
 function verificarQuestao2ES() {
   const radios = document.getElementsByName("questao2");
-  let respostaCerta = "B-destino trágico de Santiago, que Plácida foi incapaz de prever nos sonhos";
+  let respostaCerta =
+    "B-destino trágico de Santiago, que Plácida foi incapaz de prever nos sonhos";
   let resultado = document.getElementById("resultado2");
   let resolucao = document.getElementById("resolucao2");
 
@@ -726,7 +749,8 @@ function verificarQuestao2ES() {
 
 function verificarQuestao3ES() {
   const radios = document.getElementsByName("questao3");
-  let respostaCerta = "E-permanência da inconstância em uma sociedade marcada por contínuas mudanças";
+  let respostaCerta =
+    "E-permanência da inconstância em uma sociedade marcada por contínuas mudanças";
   let resultado = document.getElementById("resultado3");
   let resolucao = document.getElementById("resolucao3");
 
@@ -766,7 +790,8 @@ function verificarQuestao4ES() {
 
 function verificarQuestao5ES() {
   const radios = document.getElementsByName("questao5");
-  let respostaCerta = "D-explorar as relações entre as línguas estudadas para promover a diversidade";
+  let respostaCerta =
+    "D-explorar as relações entre as línguas estudadas para promover a diversidade";
   let resultado = document.getElementById("resultado5");
   let resolucao = document.getElementById("resolucao5");
 
@@ -786,7 +811,8 @@ function verificarQuestao5ES() {
 
 function verificarQuestao1ING() {
   const radios = document.getElementsByName("questao1");
-  let respostaCerta = "B-os ratos e os humanos possuem a mesma via metabólica para produção de morfina.";
+  let respostaCerta =
+    "B-os ratos e os humanos possuem a mesma via metabólica para produção de morfina.";
   let resultado = document.getElementById("resultado1");
   let resolucao = document.getElementById("resolucao1");
 
@@ -806,7 +832,8 @@ function verificarQuestao1ING() {
 
 function verificarQuestao2ING() {
   const radios = document.getElementsByName("questao2");
-  let respostaCerta = "D-reforçar a ideia de que os jovens precisam de amor, mas também de firmeza ";
+  let respostaCerta =
+    "D-reforçar a ideia de que os jovens precisam de amor, mas também de firmeza ";
   let resultado = document.getElementById("resultado2");
   let resolucao = document.getElementById("resolucao2");
 
@@ -846,7 +873,8 @@ function verificarQuestao3ING() {
 
 function verificarQuestao4ING() {
   const radios = document.getElementsByName("questao4");
-  let respostaCerta = "A-festeja o fato de ter sido ousado na escolha que fez em sua vida.";
+  let respostaCerta =
+    "A-festeja o fato de ter sido ousado na escolha que fez em sua vida.";
   let resultado = document.getElementById("resultado4");
   let resolucao = document.getElementById("resolucao4");
 
@@ -984,3 +1012,13 @@ function verificarQuestao5MAT() {
   resultado.textContent = "Por favor, selecione uma resposta.";
 }
 
+const active = document.querySelectorAll("#menu-materias nav al li a");
+const activePage = window.location.pathname;
+
+active.forEach((link) => {
+  const newLink = new URL(link.href).pathname;
+
+  if (activePage === newLink) {
+    link.classList.add("active__materias");
+  }
+});

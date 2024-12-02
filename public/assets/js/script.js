@@ -1022,3 +1022,36 @@ active.forEach((link) => {
     link.classList.add("active__materias");
   }
 });
+
+const editable = document.querySelector("#editable");
+
+const btnUpdateProfile = document.querySelector("#update");
+const btnEditProfile = document.querySelector("#edit");
+const btnCancel = document.querySelector("#cancel");
+
+btnCancel.style.display = "none";
+
+btnEditProfile.addEventListener("click", () => {
+  btnCancel.style.display = "flex";
+  btnEditProfile.style.display = "none";
+  btnUpdateProfile.classList.add("enable");
+  const activeInput = document.querySelectorAll("#form_profile input");
+
+  activeInput.forEach((edit) => {
+    edit.disabled = false;
+    edit.classList.add("activeInput");
+  });
+});
+
+btnCancel.addEventListener("click", () => {
+  btnCancel.style.display = "none";
+  btnEditProfile.style.display = "flex";
+  btnUpdateProfile.classList.remove("enable");
+  const activeInput = document.querySelectorAll("#form_profile input");
+  btnUpdateProfile.disnabled = true;
+
+  activeInput.forEach((edit) => {
+    edit.disabled = true;
+    edit.classList.remove("activeInput");
+  });
+});

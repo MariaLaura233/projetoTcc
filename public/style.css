@@ -1152,5 +1152,119 @@ h1 {
     background: var(--cor-verde);
     color: var(--cor-branco);
 }
+/* ///////////////////
+estilo pagina prifile
+//////////////////////////// */
+
+.editable {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 50px;
+    width: 500px;
+}
+
+.editable div.grid_profile {
+    display: grid;
+    grid-template-columns: 170px 300px;
+    padding: 0.3rem;
+}
+
+.editable div span {
+    padding: 0.2rem;
+    border-bottom: 1px solid;
+    text-align: right;
+}
+
+.editable div textarea,
+.editable div input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}
+     
+      .container {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px;
+      }
+      .menu {
+          font-size: 1.2em;
+          display: flex;
+          gap: 10px;
+      }
+      .menu a {
+          text-decoration: none;
+          color: black;
+      }
+      .menu a:hover {
+          text-decoration: underline;
+      }
+      .perfil {
+          display: flex;
+          justify-content: space-between;
+          background-color: white;
+          border-radius: 8px;
+          padding: 10px;
+          
+          margin-top: 10px;
+      }
+      .perfil-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+      }
+      .perfil-info img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+      }
+      .perfil-info p {
+          font-size: 1.2em;
+          margin: 0;
+      }
+
+      .editar div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .editar a,
+      .editar button {
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background 300ms ease-in-out;
+      }
+
+      .editar a {
+          background-color: #5DADE2;
+          color: white;
+          cursor: pointer;
+      }
+
+      .enabled {
+        background-color: #5DADE2;
+        color: white;
+        cursor: pointer;
+    }
+
+    .editar a:hover,
+    .enabled:hover {
+        background-color: #3498db;
+    }
+      .quest-icon img {
+          width: 200px;
+        
+      }
+      
+      .activeInput {
+        background: rgb(255, 189, 89) !important;
+      }
 
 

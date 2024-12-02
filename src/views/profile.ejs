@@ -1,92 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
   <%- include('components/head') %>
+  <title>Perfil de Usuário</title>
+</head>
   <body>
     <%- include('components/header') %>
     <main>
 
-      <!DOCTYPE html>
-      <html lang="pt-BR">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Perfil de Usuário</title>
-          <title>Página Editável</title>
-      <style>
-        .editable {
-            border: 1px solid #ccc;
-            padding: 10px;
-            min-height: 50px;
-            width: 300px;
-        }
-      </style>
-          <style>
-             
-              .container {
-                  display: flex;
-                  justify-content: space-between;
-                  margin: 10px;
-              }
-              .menu {
-                  font-size: 1.2em;
-                  display: flex;
-                  gap: 10px;
-              }
-              .menu a {
-                  text-decoration: none;
-                  color: black;
-              }
-              .menu a:hover {
-                  text-decoration: underline;
-              }
-              .perfil {
-                  display: flex;
-                  justify-content: space-between;
-                  background-color: white;
-                  border-radius: 8px;
-                  padding: 10px;
-                  
-                  margin-top: 10px;
-              }
-              .perfil-info {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  gap: 10px;
-              }
-              .perfil-info img {
-                  width: 100px;
-                  height: 100px;
-                  border-radius: 50%;
-              }
-              .perfil-info p {
-                  font-size: 1.2em;
-                  margin: 0;
-              }
-              .editar {
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-              }
-              .editar button {
-                  background-color: #5DADE2;
-                  border: none;
-                  padding: 10px 20px;
-                  border-radius: 5px;
-                  cursor: pointer;
-                  color: white;
-                  font-size: 1em;
-              }
-              .editar button:hover {
-                  background-color: #3498DB;
-              }
-              .quest-icon img {
-                  width: 200px;
-                
-              }
-          </style>
-      </head>
-<body>
     <section class="perfil container">
         <div class="perfil-info">
             <div class="icon-perfil-profile">
@@ -189,27 +110,7 @@
             </div>
         </div>
     </section>
-</body>
-</html>
 </main>
-<script>
-    const editable = document.querySelector("#editable");
-
-    const btnUpdateProfile = document.querySelector("#update");
-    const btnEditProfile = document.querySelector(#edit);
-    const btnCancel = document.querySelector("#cancel");
-
-    btnCancel.style.display =  "none";
-
-    btnEditProfile.addEventListener("click", () => {
-        btnCancel.style.display = "flex";
-        btnEditProfile.style.display = "none";
-        btnUpdateProfile.classList.add("enable");
-        const activeInput = document.querySelectorAll("#form_profile input");
-
-        activeInput.forEach((edit) => {
-            edit.disabled = false;
-            edit.classList.add("activeInput");
-        });
-    });
-</script>
+    <%- include('components/footer') %>
+  </body>
+</html>

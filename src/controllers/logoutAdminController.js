@@ -1,7 +1,9 @@
-module.exports = class LogoutAdminController {
+class LogoutAdminController {
   static async LogoutAdmin(req, res) {
     req.session.logged = false;
     res.clearCookie("tokenAdmin");
     res.redirect("/admin");
   }
 }
+
+module.exports = LogoutAdminController;

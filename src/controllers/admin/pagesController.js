@@ -1,7 +1,7 @@
 const PagesModel = require("../../models/pagesModel");
 const PositionModel = require("../../models/positionModel");
 
-module.exports = class PagesController {
+class PagesController {
   static async getPages(req, res) {
     const adminUser = req.session.adminUser;
     const result = await PagesModel.selectJoinPagesPosition();
@@ -94,4 +94,6 @@ module.exports = class PagesController {
 
     return res.redirect("/pages");
   }
-};
+}
+
+module.exports = PagesController;

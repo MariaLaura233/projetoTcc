@@ -7,8 +7,12 @@
   <body>
     <%- include('components/header') %>
     <main>
-      
-   
+      <div class="title-home">
+        <% if (pages.length > 0) { pages.forEach((page) => { if
+          (page.position_name === "Home") { %>
+            <div><%- page.page_content %></div>
+            <% } }); } %>
+      </div>
     <div class="home2">  
     <div class="materias">
       <div class="content-form-login2">

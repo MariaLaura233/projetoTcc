@@ -4,7 +4,7 @@ class HomeController {
   static async getHome(req, res) {
     const result = await PagesModel.selectJoinPagesPosition();
 
-    return res.render("home", { pages: result });
+    res.render("home", { pages: result });
   }
 }
 

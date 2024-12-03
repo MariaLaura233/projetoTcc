@@ -1,4 +1,4 @@
-module.exports = class MateriasController {
+class MateriasController {
   static async getMaterias(req, res) {
     return res.render("materias");
   }
@@ -46,4 +46,6 @@ module.exports = class MateriasController {
   static async getMateriaMatematica(req, res) {
     return res.render("matematica");
   }
-};
+}
+
+module.exports = MateriasController;

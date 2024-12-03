@@ -1,7 +1,7 @@
 const { deletePage } = require("../controllers/admin/pagesController");
 const database = require("../database/database");
 
-module.exports = class PagesModel {
+class PagesModel {
   static async selectAllPages() {
     const selectAllPages = "SELECT * pages;";
     const [result] = await database.query(selectAllPages);
@@ -77,4 +77,6 @@ module.exports = class PagesModel {
 
     return result;
   }
-};
+}
+
+module.exports = PagesModel;
